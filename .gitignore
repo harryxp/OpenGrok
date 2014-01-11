@@ -39,3 +39,4 @@ opengrok-web-nbproject/nbproject/genfiles.properties
 run_my.bat
 *.xml~
 opengrok-web-nbproject/nbproject/build-impl.xml~
+web/WEB-INF/lib/

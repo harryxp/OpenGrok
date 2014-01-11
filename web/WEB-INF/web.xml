@@ -5,10 +5,10 @@
   <description>A wicked fast source browser</description>
   <context-param>
     <param-name>CONFIGURATION</param-name>
-    <param-value>/var/opengrok/etc/configuration.xml</param-value>
+    <param-value>/Users/hpan/og-instance-base/etc/configuration.xml</param-value>
     <description>Full path to the configuration file where OpenGrok can read it's configuration</description>
   </context-param>
-  
+
   <context-param>
     <param-name>ConfigAddress</param-name>
     <param-value>localhost:2424</param-value>
@@ -18,14 +18,14 @@
   <listener>
    <listener-class>org.opensolaris.opengrok.web.WebappListener</listener-class>
   </listener>
-    
+
   <servlet>
     <servlet-name>search</servlet-name>
     <display-name>Source Finder</display-name>
     <jsp-file>/search.jsp</jsp-file>
 <init-param>
 <param-name>keepgenerated</param-name><param-value>true</param-value>
-</init-param>  
+</init-param>
   </servlet>
   <servlet>
     <servlet-name>history</servlet-name>
@@ -33,7 +33,7 @@
     <jsp-file>/history.jsp</jsp-file>
 <init-param>
 <param-name>keepgenerated</param-name><param-value>true</param-value>
-</init-param>  
+</init-param>
   </servlet>
   <servlet>
     <servlet-name>lister</servlet-name>
@@ -94,7 +94,7 @@
     <jsp-file>/error.jsp</jsp-file>
 <init-param>
 <param-name>keepgenerated</param-name><param-value>true</param-value>
-</init-param>  
+</init-param>
   </servlet>
   <servlet>
     <servlet-name>enoent</servlet-name>
@@ -102,7 +102,7 @@
     <jsp-file>/enoent.jsp</jsp-file>
 <init-param>
 <param-name>keepgenerated</param-name><param-value>true</param-value>
-</init-param>  
+</init-param>
   </servlet>
   <servlet-mapping>
     <servlet-name>search</servlet-name>
