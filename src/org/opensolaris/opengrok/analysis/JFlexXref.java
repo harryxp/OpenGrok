@@ -400,6 +400,9 @@ public abstract class JFlexXref {
             appendProject();
             out.append("\" class=\"");
             out.append(style_class);
+            out.append("\" onmouseover=\"onMouseOverSymbol('");
+            out.append(symbol);
+            out.append("', 'def')");
             out.append("\">");
             out.append(symbol);
             out.append("</a>");
@@ -413,6 +416,9 @@ public abstract class JFlexXref {
             out.append(style_class);
             out.append("\" href=\"#");
             out.append(symbol);
+            out.append("\" onmouseover=\"onMouseOverSymbol('");
+            out.append(symbol);
+            out.append("', 'defined-in-file')");
             out.append("\">");
             out.append(symbol);
             out.append("</a>");
@@ -427,6 +433,9 @@ public abstract class JFlexXref {
             out.append("defs=");
             out.append(symbol);
             appendProject();
+            out.append("\" onmouseover=\"onMouseOverSymbol('");
+            out.append(symbol);
+            out.append("', 'undefined-in-file')");
             out.append("\">");
             out.append(symbol);
             out.append("</a>");
