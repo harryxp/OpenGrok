@@ -145,6 +145,52 @@ include file="pageheader.jspf"
             + (rev.length() == 0 ? "" : "?") + rev
             %>"><span id="download"></span>Download</a></li>
 	<%
+        if (path.endsWith(".pm")) {
+    %>
+    <li>
+        <input type="button" id="goto_test" value="Goto test"
+            onclick='
+                oldUrl = document.URL;
+                idx = oldUrl.lastIndexOf("/");
+                newUrl = oldUrl.slice(0, idx) + "/TEST" + oldUrl.slice(idx);
+                window.open(newUrl);'
+        />
+    </li>
+    <li>
+        <input type="button" id="goto_impl" value="Goto impl"
+            onclick='
+                oldUrl = document.URL;
+                idx = oldUrl.lastIndexOf("TEST/");
+                newUrl = oldUrl.slice(0, idx) + oldUrl.slice(idx + 5);
+                window.open(newUrl);'
+        />
+    </li>
+    <%
+        } else if (path.endsWith(".cpp")) {
+    %>
+    <li>
+        <input type="button" id="goto_hpp" value="Goto .hpp"
+            onclick='
+                oldUrl = document.URL;
+                idx = oldUrl.lastIndexOf(".cpp");
+                newUrl = oldUrl.slice(0, idx) + ".hpp";
+                window.open(newUrl);'
+        />
+    </li>
+    <%
+        } else if (path.endsWith(".hpp")) {
+    %>
+    <li>
+        <input type="button" id="goto_cpp" value="Goto .cpp"
+            onclick='
+                oldUrl = document.URL;
+                idx = oldUrl.lastIndexOf(".hpp");
+                newUrl = oldUrl.slice(0, idx) + ".cpp";
+                window.open(newUrl);'
+        />
+    </li>
+    <%
+        }
     }
         %><li><input type="text" id="search" name="q" class="q" />
             <input type="submit" value="Search" class="submit" /></li><%
