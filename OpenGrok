@@ -323,7 +323,7 @@ DefaultInstanceConfiguration()
     fi
 
     # OPTIONAL: JVM Options
-    JAVA_OPTS="${JAVA_OPTS:--Xmx2048m}"
+    JAVA_OPTS="${JAVA_OPTS:--Xmx4096m}"
     
     # OPTIONAL: Full Path to History Utilities
     HG="`Which hg`"
